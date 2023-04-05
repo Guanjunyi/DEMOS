@@ -31,7 +31,7 @@ lambda = 2; % amplification factor
 if d<=10
     [knn,knn_dist] = knnsearch(data,data,'k',k);
 else
-    dist = pdist2(data,data);
+    dist = pdist2(data,data,'euclidean');
     [knn_dist,knn] = sort(dist,2);
 end
 
